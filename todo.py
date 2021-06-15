@@ -21,7 +21,6 @@ class Item():
     __title = "empty"
     __status = Status.NOT_STARTED
     __priority = Priority.LOW
-    __id = str(uuid4())
     __flag = False 
     __url = ""
     __due_date = date
@@ -32,6 +31,7 @@ class Item():
     def __init__(self, title:str=None):
         if title is not None:
             self.__title = title
+        self.__id = str(uuid4())
 
     @property
     def title(self):
